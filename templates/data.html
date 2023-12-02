@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffffff, #3498db);
+      color: navy; /* Set text color to navy blue */
+      font-family: 'Arial', sans-serif; /* Set the font family */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      height: 100vh; /* Make sure the background covers the entire viewport height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; /* Align content vertically in the center */
+    }
+
+    header {
+      font-size: 2em; /* Set header font size */
+      margin-bottom: 20px; /* Add margin below the header */
+    }
+    .go-back-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .go-back-link:hover {
+      background-color: #217dbb;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>NIDS</header>
+  <div id="data-container">
+    {{data | safe}}
+  </div>
+
+  <p><a href="http://127.0.0.1:5000/" class="go-back-link" onclick="history.back();">Go back</a></p>
+</body>
+</html>
